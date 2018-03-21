@@ -7,3 +7,12 @@ a {
   position: static;
   vertical-align: top;
 }
+
+table, th, td{
+  border: 1px solid black;
+  text-align: center;
+}
+
+table{
+  border-collapse: collapse;
+}
