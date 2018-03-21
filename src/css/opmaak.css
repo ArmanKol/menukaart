@@ -1,0 +1,7 @@
+.menuknoppenIndeling {
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 50%;
+  text-align: left;
+}

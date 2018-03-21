@@ -1,0 +1,26 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="footer-element">
+  <link rel="import" type="css" href="/src/css/opmaak.css">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+        <button>Gerecht toevoegen</button>
+        <button>Gerecht verwijderen</button>
+        <button>Eigenschappen gerecht wijzigen</button>
+        <button>Gerecht beschikbaarheid</button>
+        <button>Overzicht menukaart</button>
+  </template>
+  <script>
+    class NavigatieElement extends Polymer.Element {
+      static get is() {
+        return 'navigatie-element';
+        }
+      }
+
+    window.customElements.define(NavigatieElement.is, NavigatieElement);
+  </script>
+</dom-module>
