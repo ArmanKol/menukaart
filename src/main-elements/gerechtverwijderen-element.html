@@ -1,7 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../src/main-elements/navigatie-element.html">
 
-<dom-module id="gerechttoevoegen-element">
+<dom-module id="gerechtverwijderen-element">
   <link rel="import" type="css" href="/src/css/opmaak.css">
   <template>
     <style>
@@ -9,15 +9,14 @@
         display: block;
       }
     </style>
-      Voer hier de naam van het nieuwe ingrediënt in: <input type="text">
   </template>
   <script>
-    class GerechtToevoegen extends Polymer.Element {
+    class GerechtVerwijderen extends Polymer.Element {
       static get is() {
-        return 'gerechttoevoegen-element';
+        return 'gerechtverwijderen-element';
         }
       }
 
-    window.customElements.define(GerechtToevoegen.is, GerechtToevoegen);
+    window.customElements.define(GerechtVerwijderen.is, GerechtVerwijderen);
   </script>
 </dom-module>
