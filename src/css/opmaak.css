@@ -1,7 +1,9 @@
-.menuknoppenIndeling {
+h2.titel{
+  border: 1px solid black;
+  width: 200px;
   display: inline-block;
-  float: left;
-  clear: left;
-  width: 50%;
-  text-align: left;
+}
+a {
+  position: static;
+  vertical-align: top;
 }

@@ -1,0 +1,22 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../src/main-elements/navigatie-element.html">
+
+<dom-module id="gerechttoevoegen-element">
+  <link rel="import" type="css" href="/src/css/opmaak.css">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+  </template>
+  <script>
+    class GerechtToevoegen extends Polymer.Element {
+      static get is() {
+        return 'gerechttoevoegen-element';
+        }
+      }
+
+    window.customElements.define(GerechtToevoegen.is, GerechtToevoegen);
+  </script>
+</dom-module>

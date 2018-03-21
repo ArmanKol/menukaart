@@ -1,6 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 
-<dom-module id="footer-element">
+<dom-module id="navigatie-element">
   <link rel="import" type="css" href="/src/css/opmaak.css">
   <template>
     <style>
@@ -8,11 +8,14 @@
         display: block;
       }
     </style>
-        <button>Gerecht toevoegen</button>
-        <button>Gerecht verwijderen</button>
-        <button>Eigenschappen gerecht wijzigen</button>
-        <button>Gerecht beschikbaarheid</button>
-        <button>Overzicht menukaart</button>
+      <header>
+        <h2 class=titel>Gerechten management app</h2>
+        <a href="gerechtToevoegen.html"><button>Gerecht toevoegen</button></a>
+        <a href="gerechtVerwijderen.html"><button>Gerecht verwijderen</button></a>
+        <a href="eigenschappenWijzigen.html"><button>Eigenschappen gerecht wijzigen</button></a>
+        <a href="gerechtBeschikbaarheid.html"><button>Gerecht beschikbaarheid</button></a>
+        <a href="overzichtMenukaart.html"><button>Overzicht menukaart</button></a>
+      </header>
   </template>
   <script>
     class NavigatieElement extends Polymer.Element {
