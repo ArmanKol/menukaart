@@ -1,0 +1,6 @@
+{
+  "name": "menukaart",
+  "short_name": "menukaart",
+  "start_url": "/",
+  "display": "standalone"
+}
