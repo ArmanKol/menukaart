@@ -1,6 +1,9 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../src/main-elements/navigatie-element.html">
 <link rel="import" href="../../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
+<link rel="import" href="../../bower_components/vaadin-grid/vaadin-grid.html">
+<link rel="import" href="../../bower_components/vaadin-grid/vaadin-grid-column.html">
+
 
 <dom-module id="overzichtmenukaart-element">
   <link rel="import" type="css" href="/src/css/opmaak.css">
@@ -10,40 +13,35 @@
         display: block;
       }
     </style>
+      <vaadin-grid items="[[gerechten]]">
 
-    <table style="width:80%">
-      <tr>
-        <th>Naam</th>
-        <th>Ingrediënt</th>
-        <th>Beschikbaarheid</th>
-      </tr>
-      <tr>
-        <td>{{naam}}</td>
-        <td>{{ingredienten}}</td>
-        <td>Beschikbaar</td>
-      </tr>
-      <tr>
-        <td>Pizza Mozarella</td>
-        <td>Tomaat - Kaas - mozzarellakaas</td>
-        <td>Beschikbaar</td>
-      </tr>
-      <tr>
-        <td>Pizza Salami</td>
-        <td>Tomaat - Kaas - salami</td>
-        <td>Niet beschikbaar</td>
-      </tr>
-    </table>
+        <vaadin-grid-column>
+          <template class="header">Naam</template>
+          <template>[[item.naam]]</template>
+          <template class="footer">Naam</template>
+        </vaadin-grid-column>
 
-    <app-localstorage-document key="naam" data="{{naam}}"></app-localstorage-document>
-    <app-localstorage-document key="ingredienten" data="{{ingredienten}}"></app-localstorage-document>
+        <vaadin-grid-column>
+          <template class="header">Ingrediënten</template>
+          <template>[[item.ingredienten]]</template>
+          <template class="footer">Ingrediënten</template>
+        </vaadin-grid-column>
+
+      </vaadin-grid>
+
 
   </template>
   <script>
     class OverzichtMenukaart extends Polymer.Element {
-      static get is() {
-        return 'overzichtmenukaart-element';
-        }
+      static get is() {return 'overzichtmenukaart-element';}
+
+      static get properties(){
+        return{
+          gerechten: {type: Array, value: [{naam: "Pizza Margherita", ingredienten : "Tomaat - Kaas"},
+                                           {naam: "Pizza Mozarella", ingredienten : "Tomaat - Kaas - mozzarellakaas"}]}
+        };
       }
+    }
 
     window.customElements.define(OverzichtMenukaart.is, OverzichtMenukaart);
   </script>
