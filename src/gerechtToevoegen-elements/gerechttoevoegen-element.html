@@ -20,7 +20,7 @@
         <paper-input label="Naam" value="{{naam}}"></paper-input>
         <p>Ingrediënten</p>
         <paper-textarea label="Ingrediënten" value="{{ingredienten}}"></paper-textarea>
-        <paper-button raised>Opslaan</paper-button>
+        <paper-button onclick="clicked()" raised>Opslaan</paper-button>
 
 
         <app-localstorage-document key="naam" data="{{naam}}"></app-localstorage-document>
@@ -33,6 +33,10 @@
       static get is() {
         return 'gerechttoevoegen-element';
         }
+      }
+
+      function clicked(){
+        console.log("Ik print shit uit");
       }
 
     window.customElements.define(GerechtToevoegen.is, GerechtToevoegen);
