@@ -17,8 +17,15 @@ table{
   border-collapse: collapse;
 }
 
+.eigenschappenWijzigen{
+  background-color: white;
+  background-position: center;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
 .gerechttoevoegen{
-  background-color: grey;
+  background-color: white;
   background-position: center;
   text-align: center;
   vertical-align: top;
@@ -26,8 +33,13 @@ table{
 }
 
 .gerechtverwijderen{
-  background-color: grey;
+  background-color: white;
   background-position: center;
   text-align: center;
   padding-bottom: 10px;
+}
+
+paper-input, paper-textarea{
+  max-width: 300px;
+  margin: auto;
 }

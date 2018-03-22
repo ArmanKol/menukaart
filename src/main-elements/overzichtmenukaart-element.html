@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../src/main-elements/navigatie-element.html">
+<link rel="import" href="../../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
 
 <dom-module id="overzichtmenukaart-element">
   <link rel="import" type="css" href="/src/css/opmaak.css">
@@ -17,8 +18,8 @@
         <th>Beschikbaarheid</th>
       </tr>
       <tr>
-        <td>Pizza Margherita</td>
-        <td>Tomaat - Kaas</td>
+        <td>{{naam}}</td>
+        <td>{{ingredienten}}</td>
         <td>Beschikbaar</td>
       </tr>
       <tr>
@@ -32,6 +33,10 @@
         <td>Niet beschikbaar</td>
       </tr>
     </table>
+
+    <app-localstorage-document key="naam" data="{{naam}}"></app-localstorage-document>
+    <app-localstorage-document key="ingredienten" data="{{ingredienten}}"></app-localstorage-document>
+
   </template>
   <script>
     class OverzichtMenukaart extends Polymer.Element {
