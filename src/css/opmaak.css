@@ -16,3 +16,8 @@ table, th, td{
 table{
   border-collapse: collapse;
 }
+
+.gerechttoevoegen{
+  background: grey;
+  text-align: center;
+}
