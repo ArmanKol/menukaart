@@ -18,6 +18,16 @@ table{
 }
 
 .gerechttoevoegen{
-  background: grey;
+  background-color: grey;
+  background-position: center;
   text-align: center;
+  vertical-align: top;
+  padding-bottom: 10px;
+}
+
+.gerechtverwijderen{
+  background-color: grey;
+  background-position: center;
+  text-align: center;
+  padding-bottom: 10px;
 }
