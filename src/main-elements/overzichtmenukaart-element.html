@@ -13,21 +13,24 @@
         display: block;
       }
     </style>
-      <vaadin-grid items="[[gerechten]]">
+      <vaadin-grid items="[[]]">
 
         <vaadin-grid-column>
           <template class="header">Naam</template>
-          <template>[[item.naam]]</template>
+          <template>{{naam}}</template>
           <template class="footer">Naam</template>
         </vaadin-grid-column>
 
         <vaadin-grid-column>
           <template class="header">Ingrediënten</template>
-          <template>[[item.ingredienten]]</template>
+          <template>{{ingredienten}}</template>
           <template class="footer">Ingrediënten</template>
         </vaadin-grid-column>
 
       </vaadin-grid>
+
+      <app-localstorage-document key="naam" data="{{naam}}"></app-localstorage-document>
+      <app-localstorage-document key="ingredienten" data="{{ingredienten}}"></app-localstorage-document>
 
 
   </template>
