@@ -16,9 +16,7 @@
     </style>
       <div class="gerechttoevoegen">
         <h1>Gerecht toevoegen</h1>
-        <p>Naam nieuw gerecht</p>
-        <paper-input label="Naam" value="{{naam}}"></paper-input>
-        <p>Ingrediënten</p>
+        <paper-input label="Naam nieuw gerecht" value="{{naam}}"></paper-input>
         <paper-textarea label="Ingrediënten" value="{{ingredienten}}"></paper-textarea>
         <paper-button onclick="clicked()" raised>Opslaan</paper-button>
 
@@ -36,6 +34,8 @@
       }
 
       function clicked(){
+
+        console.log();
         console.log("Ik print shit uit");
       }
 

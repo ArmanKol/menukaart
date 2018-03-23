@@ -1,7 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../src/main-elements/navigatie-element.html">
-<link rel="import" href="../../bower_components/paper-input/paper-input.html">
-<link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
 
 <dom-module id="eigenschappenwijzigen-element">
   <link rel="import" type="css" href="/src/css/opmaak.css">
@@ -11,10 +9,11 @@
         display: block;
       }
     </style>
-    <div class="eigenschappenWijzigen">
+    <div class="gerechttoevoegen">
       <h1>Eigenschappen gerecht wijzigen</h1>
-      <paper-input label="Vul hier de naam van het gerecht in dat je wilt wijzigen"></paper-input>
-      <a href="eigenschappenWijzigen_volgende.html"><button>Volgende</button></a>
+      Naam gerecht <input type="text"><br>
+      Nieuwe ingrediënten <textarea name="ingredienten"></textarea><br>
+      <button>Opslaan</button>
     </div>
   </template>
   <script>
