@@ -43,3 +43,7 @@ paper-input, paper-textarea{
   max-width: 300px;
   margin: auto;
 }
+
+header {
+  font-family: "Arial", Arial, Sans-serif;
+}
