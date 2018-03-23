@@ -28,3 +28,15 @@ static get properties(){
   return{ gerechten: {type: Array, value: [{naam: "Pizza Margherita", ingredienten : "Tomaat - Kaas"},
                      {naam: "Pizza Mozarella", ingredienten : "Tomaat - Kaas - mozzarellakaas"}]}};
   }
+
+
+  Polymer({
+    is: 'gerechttoevoegen-element',
+      properties: {values: {type: String}},
+      opslaan: function() {
+        var x =[];
+        var naamvalue = this.naamGerechtvalue;
+        var ingredienten = this.naamIngredientenvalue;
+
+    }
+  });

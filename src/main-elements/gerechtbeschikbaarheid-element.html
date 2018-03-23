@@ -16,23 +16,23 @@
 
       <vaadin-grid-column>
         <template class="header">Naam</template>
-        <template>{{naam}}</template>
+        <template>{{naamGerechtvalue}}</template>
       </vaadin-grid-column>
 
       <vaadin-grid-column>
         <template class="header">Ingrediënten</template>
-        <template>{{ingredienten}}</template>
+        <template>{{naamIngredientenvalue}}</template>
       </vaadin-grid-column>
 
       <vaadin-grid-column>
         <template class="header">Beschikbaarheid</template>
-        <template><input type="checkbox"></template>
+        <template><input type="checkbox" id="beschikbaarheidbox" checked=checked></template>
       </vaadin-grid-column>
 
     </vaadin-grid>
 
-    <app-localstorage-document key="naam" data="{{naam}}"></app-localstorage-document>
-    <app-localstorage-document key="ingredienten" data="{{ingredienten}}"></app-localstorage-document>
+    <app-localstorage-document key="naamKey" data="{{naamGerechtvalue}}"></app-localstorage-document>
+    <app-localstorage-document key="ingredientenKey" data="{{naamIngredientenvalue}}"></app-localstorage-document>
 
   </template>
   <script>
