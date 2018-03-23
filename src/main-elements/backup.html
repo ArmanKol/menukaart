@@ -1,0 +1,25 @@
+<table style="width:80%">
+  <tr>
+    <th>Naam</th>
+    <th>Ingrediënt</th>
+    <th>Beschikbaarheid</th>
+  </tr>
+  <tr>
+    <td>{{naam}}</td>
+    <td>{{ingredienten}}</td>
+    <td>Beschikbaar</td>
+  </tr>
+  <tr>
+    <td>Pizza Mozarella</td>
+    <td>Tomaat - Kaas - mozzarellakaas</td>
+    <td>Beschikbaar</td>
+  </tr>
+  <tr>
+    <td>Pizza Salami</td>
+    <td>Tomaat - Kaas - salami</td>
+    <td>Niet beschikbaar</td>
+  </tr>
+</table>
+
+<app-localstorage-document key="naam" data="{{naam}}"></app-localstorage-document>
+<app-localstorage-document key="ingredienten" data="{{ingredienten}}"></app-localstorage-document>
