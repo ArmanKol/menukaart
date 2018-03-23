@@ -1,5 +1,8 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../src/main-elements/navigatie-element.html">
+<link rel="import" href="../../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
+<link rel="import" href="../../bower_components/vaadin-grid/vaadin-grid.html">
+<link rel="import" href="../../bower_components/vaadin-grid/vaadin-grid-column.html">
 
 <dom-module id="gerechtbeschikbaarheid-element">
   <link rel="import" type="css" href="/src/css/opmaak.css">
@@ -9,28 +12,28 @@
         display: block;
       }
     </style>
-    <table style="width:80%">
-      <tr>
-        <th>Naam</th>
-        <th>ingrediënt</th>
-        <th>Beschikbaar</th>
-      </tr>
-      <tr>
-        <td>Pizza Margherita</td>
-        <td>Tomaat - Kaas</td>
-        <td><input type=checkbox></td>
-      </tr>
-      <tr>
-        <td>Pizza Mozarella</td>
-        <td>Tomaat - Kaas - mozzarellakaas</td>
-        <td><input type=checkbox></td>
-      </tr>
-      <tr>
-        <td>Pizza Salami</td>
-        <td>Tomaat - Kaas - salami</td>
-        <td><input type=checkbox></td>
-      </tr>
-    </table>
+    <vaadin-grid items="[[]]">
+
+      <vaadin-grid-column>
+        <template class="header">Naam</template>
+        <template>{{naam}}</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column>
+        <template class="header">Ingrediënten</template>
+        <template>{{ingredienten}}</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column>
+        <template class="header">Beschikbaarheid</template>
+        <template><input type="checkbox"></template>
+      </vaadin-grid-column>
+
+    </vaadin-grid>
+
+    <app-localstorage-document key="naam" data="{{naam}}"></app-localstorage-document>
+    <app-localstorage-document key="ingredienten" data="{{ingredienten}}"></app-localstorage-document>
+
   </template>
   <script>
     class GerechtBeschikbaarheid extends Polymer.Element {

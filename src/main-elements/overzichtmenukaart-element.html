@@ -18,13 +18,11 @@
         <vaadin-grid-column>
           <template class="header">Naam</template>
           <template>{{naam}}</template>
-          <template class="footer">Naam</template>
         </vaadin-grid-column>
 
         <vaadin-grid-column>
           <template class="header">Ingrediënten</template>
           <template>{{ingredienten}}</template>
-          <template class="footer">Ingrediënten</template>
         </vaadin-grid-column>
 
       </vaadin-grid>
@@ -32,19 +30,17 @@
       <app-localstorage-document key="naam" data="{{naam}}"></app-localstorage-document>
       <app-localstorage-document key="ingredienten" data="{{ingredienten}}"></app-localstorage-document>
 
-
   </template>
   <script>
     class OverzichtMenukaart extends Polymer.Element {
       static get is() {return 'overzichtmenukaart-element';}
 
       static get properties(){
-        return{
-          gerechten: {type: Array, value: [{naam: "Pizza Margherita", ingredienten : "Tomaat - Kaas"},
-                                           {naam: "Pizza Mozarella", ingredienten : "Tomaat - Kaas - mozzarellakaas"}]}
-        };
+        return{naam: String, ingredienten: String};
       }
     }
+
+
 
     window.customElements.define(OverzichtMenukaart.is, OverzichtMenukaart);
   </script>

@@ -13,7 +13,7 @@
       <div class=gerechtverwijderen>
         <h1>Gerecht verwijderen</h1>
         <paper-input label="Naam"></paper-input>
-        <button>Verwijder</button>
+        <button onclick="onClicked()">Verwijder</button>
       </div>
   </template>
   <script>
@@ -21,6 +21,10 @@
       static get is() {
         return 'gerechtverwijderen-element';
         }
+      }
+
+      function onClicked(){
+        localStorage.clear();
       }
 
     window.customElements.define(GerechtVerwijderen.is, GerechtVerwijderen);

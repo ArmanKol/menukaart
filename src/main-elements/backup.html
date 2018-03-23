@@ -23,3 +23,8 @@
 
 <app-localstorage-document key="naam" data="{{naam}}"></app-localstorage-document>
 <app-localstorage-document key="ingredienten" data="{{ingredienten}}"></app-localstorage-document>
+
+static get properties(){
+  return{ gerechten: {type: Array, value: [{naam: "Pizza Margherita", ingredienten : "Tomaat - Kaas"},
+                     {naam: "Pizza Mozarella", ingredienten : "Tomaat - Kaas - mozzarellakaas"}]}};
+  }

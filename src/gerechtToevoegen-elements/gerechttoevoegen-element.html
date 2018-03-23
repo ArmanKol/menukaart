@@ -16,10 +16,9 @@
     </style>
       <div class="gerechttoevoegen">
         <h1>Gerecht toevoegen</h1>
-        <paper-input label="Naam nieuw gerecht" value="{{naam}}"></paper-input>
+        <paper-input label="Naam nieuw gerecht" value="{{naam}}" id="naam1"></paper-input>
         <paper-textarea label="Ingrediënten" value="{{ingredienten}}"></paper-textarea>
         <paper-button onclick="clicked()" raised>Opslaan</paper-button>
-
 
         <app-localstorage-document key="naam" data="{{naam}}"></app-localstorage-document>
         <app-localstorage-document key="ingredienten" data="{{ingredienten}}"></app-localstorage-document>
@@ -31,14 +30,11 @@
       static get is() {
         return 'gerechttoevoegen-element';
         }
+
+      static get properties(){
+        return{naam: String, ingredienten: String};
       }
-
-      function clicked(){
-
-        console.log();
-        console.log("Ik print shit uit");
-      }
-
+    }
     window.customElements.define(GerechtToevoegen.is, GerechtToevoegen);
   </script>
 </dom-module>
