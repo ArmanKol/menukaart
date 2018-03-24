@@ -19,12 +19,12 @@
         <h1>Gerecht toevoegen</h1>
         <paper-input label="Naam nieuw gerecht" value="{{naamGerechtvalue}}"></paper-input>
         <paper-textarea label="Ingrediënten" value="{{naamIngredientenvalue}}"></paper-textarea>
-        <paper-button raised on-tap="opslaan">Opslaan</paper-button>
-
-        <app-localstorage-document key="naamKey" data="{{naamGerechtvalue}}" storage="window.localStorage"></app-localstorage-document>
-        <app-localstorage-document key="ingredientenKey" data="{{naamIngredientenvalue}}" storage="window.localStorage"></app-localstorage-document>
+        <paper-button raised onclick="opslaan()">Opslaan</paper-button>
 
       </div>
+
+      <app-localstorage-document key="naamKey" data="{{naamGerechtvalue}}"></app-localstorage-document>
+      <app-localstorage-document key="ingredientenKey" data="{{naamIngredientenvalue}}"></app-localstorage-document>
   </template>
   <script>
   class GerechtToevoegen extends Polymer.Element {

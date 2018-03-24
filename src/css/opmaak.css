@@ -1,7 +1,40 @@
-h2.titel{
+.navigatie ul{
+  list-style-type: none;
+  margin: 20;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+.navigatie li{
+  float: left;
+  background-color: white;
+  boder-right: 2px solid #bbb;
   border: 1px solid black;
-  width: 200px;
-  display: inline-block;
+}
+
+.navigatie li a{
+  display: block;
+  color: black  ;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigatie li a:hover:not(.active){
+  background-color: #D8D8D8;
+}
+
+.navigatie li a.active{
+  color: white;
+  background-color: #D8D8D8;
+}
+
+.titel{
+  width: 300px;
+  font-weight: bold;
+
+
 }
 a {
   position: static;

@@ -2,6 +2,7 @@
 
 <dom-module id="navigatie-element">
   <link rel="import" type="css" href="/src/css/opmaak.css">
+  <script src="../../src/javascript/menu.js"></script>
   <template>
     <style>
       :host {
@@ -9,12 +10,15 @@
       }
     </style>
       <header>
-        <h2 class=titel> Gerechten management app</h2>
-        <a href="gerechtToevoegen.html"><button>Gerecht toevoegen</button></a>
-        <a href="gerechtVerwijderen.html"><button>Gerecht verwijderen</button></a>
-        <a href="eigenschappenWijzigen.html"><button>Eigenschappen gerecht wijzigen</button></a>
-        <a href="gerechtBeschikbaarheid.html"><button>Gerecht beschikbaarheid</button></a>
-        <a href="overzichtMenukaart.html"><button>Overzicht menukaart</button></a>
+        <div class="navigatie">
+          <ul>
+            <li><a class="titel" href="index.html">Gerechten management app</a><li>
+            <li><a href="overzichtMenukaart.html">Menukaart</a></li>
+            <li><a href="gerechtBeschikbaarheid.html">Gerecht beschikbaarheid</a></li>
+            <li><a href="gerechtToevoegen.html">Gerecht toevoegen</a></li>
+            <li><a href="gerechtVerwijderen.html">Gerecht verwijderen</a></li>
+          </ul>
+        </div>
       </header>
   </template>
   <script>
