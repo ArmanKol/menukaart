@@ -28,12 +28,14 @@
   </template>
   <script>
   class GerechtToevoegen extends Polymer.Element {
-    static get is() {return 'gerechttoevoegen-element';}
+    static get is() {
+      return 'gerechttoevoegen-element';}
 
     static get properties(){
       return{naam: String, ingredienten: String};
     }
   }
+
 
   window.customElements.define(GerechtToevoegen.is, GerechtToevoegen);
   </script>

@@ -2,6 +2,8 @@
 <link rel="import" href="../../src/main-elements/navigatie-element.html">
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
 
 <dom-module id="eigenschappenwijzigen-element">
   <link rel="import" type="css" href="/src/css/opmaak.css">
@@ -14,9 +16,11 @@
     </style>
     <div class="eigenschappenWijzigen">
       <h1>Eigenschappen gerecht wijzigen</h1>
-      <paper-input label="Vul hier de naam van het gerecht in dat je wilt wijzigen"></paper-input>
-      <a href="eigenschappenWijzigen_volgende.html"><button>Volgende</button></a>
+      <paper-input label="Vul hier de naam van het gerecht in dat je wilt wijzigen" value="{{naamcheckWijzigen}}"></paper-input>
+      <paper-button raised onclick="wijzigenNaamcheck()">Volgende</paper-button>
     </div>
+
+    <app-localstorage-document key="naamcheckwijzigenKey" data="{{naamcheckWijzigen}}"></app-localstorage-document>
   </template>
   <script>
     class EigenschappenWijzigen extends Polymer.Element {
