@@ -1,0 +1,27 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="footer-element">
+  <link rel="import" type="css" href="/src/css/opmaak.css">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+  <footer style="position: fixed; bottom :0; width: 100%">
+    <hr>
+      <p>-Contact</p>
+    
+  </footer>
+  </template>
+
+  <script>
+    class FooterElement extends Polymer.Element {
+      static get is() {
+        return 'footer-element';
+        }
+      }
+
+    window.customElements.define(FooterElement.is, FooterElement);
+  </script>
+</dom-module>

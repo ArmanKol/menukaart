@@ -1,0 +1,31 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../src/footer-elements/footer-element.html">
+<link rel="import" href="../../src/main-elements/navigatie-element.html">
+
+<dom-module id="menukaart-app">
+  <link rel="import" type="css" href="/src/css/opmaak.css">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <navigatie-element></navigatie-element>
+    <footer-element></footer-element>
+  </template>
+  <script>
+    class MenukaartApp extends Polymer.Element {
+      static get is() { return 'menukaart-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'menukaart-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MenukaartApp.is, MenukaartApp);
+  </script>
+</dom-module>

@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../src/main-elements/navigatie-element.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
+
+
+<dom-module id="gerechttoevoegen-element">
+  <link rel="import" type="css" href="/src/css/opmaak.css">
+  <script src="../../src/javascript/menu.js"></script>
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+      <div class="gerechttoevoegen">
+        <h1>Gerecht toevoegen</h1>
+        <paper-input label="Naam nieuw gerecht" value="{{naamGerechtvalue}}"></paper-input>
+        <paper-textarea label="Ingrediënten" value="{{naamIngredientenvalue}}"></paper-textarea>
+        <paper-button raised="" onclick="opslaan()">Opslaan</paper-button>
+
+      </div>
+
+      <app-localstorage-document key="naamKey" data="{{naamGerechtvalue}}"></app-localstorage-document>
+      <app-localstorage-document key="ingredientenKey" data="{{naamIngredientenvalue}}"></app-localstorage-document>
+  </template>
+  <script>
+  class GerechtToevoegen extends Polymer.Element {
+    static get is() {
+      return 'gerechttoevoegen-element';}
+
+    static get properties(){
+      return{naam: String, ingredienten: String};
+    }
+  }
+
+
+  window.customElements.define(GerechtToevoegen.is, GerechtToevoegen);
+  </script>
+</dom-module>

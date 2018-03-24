@@ -1,0 +1,49 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../src/main-elements/navigatie-element.html">
+<link rel="import" href="../../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
+<link rel="import" href="../../bower_components/vaadin-grid/vaadin-grid.html">
+<link rel="import" href="../../bower_components/vaadin-grid/vaadin-grid-column.html">
+<link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html">
+
+<dom-module id="gerechtbeschikbaarheid-element">
+  <link rel="import" type="css" href="/src/css/opmaak.css">
+  <script src="../../src/javascript/menu.js"></script>
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <vaadin-grid items="[[]]">
+
+      <vaadin-grid-column>
+        <template class="header">Naam</template>
+        <template>{{naamGerechtvalue}}</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column>
+        <template class="header">Ingrediënten</template>
+        <template>{{naamIngredientenvalue}}</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column>
+        <template class="header">Beschikbaarheid</template>
+        <template><paper-checkbox checked=""></paper-checkbox></template>
+      </vaadin-grid-column>
+
+    </vaadin-grid>
+
+    <app-localstorage-document key="naamKey" data="{{naamGerechtvalue}}"></app-localstorage-document>
+    <app-localstorage-document key="ingredientenKey" data="{{naamIngredientenvalue}}"></app-localstorage-document>
+
+  </template>
+  <script>
+    class GerechtBeschikbaarheid extends Polymer.Element {
+      static get is() {
+        return 'gerechtbeschikbaarheid-element';
+        }
+      }
+
+    window.customElements.define(GerechtBeschikbaarheid.is, GerechtBeschikbaarheid);
+  </script>
+</dom-module>

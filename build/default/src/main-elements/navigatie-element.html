@@ -1,0 +1,34 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="navigatie-element">
+  <link rel="import" type="css" href="/src/css/opmaak.css">
+  <script src="../../src/javascript/menu.js"></script>
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+      <header>
+        <div class="navigatie">
+          <ul>
+            <li><a class="titel" href="index.html">Gerechten management app</a></li><li>
+            </li><li><a href="overzichtMenukaart.html">Menukaart</a></li>
+            <li><a href="gerechtBeschikbaarheid.html">Gerecht beschikbaarheid</a></li>
+            <li><a href="gerechtToevoegen.html">Gerecht toevoegen</a></li>
+            <li><a href="gerechtVerwijderen.html">Gerecht verwijderen</a></li>
+            <li><a href="eigenschappenWijzigen.html">Gerecht Wijzigen</a></li>
+          </ul>
+        </div>
+      </header>
+  </template>
+  <script>
+    class NavigatieElement extends Polymer.Element {
+      static get is() {
+        return 'navigatie-element';
+        }
+      }
+
+    window.customElements.define(NavigatieElement.is, NavigatieElement);
+  </script>
+</dom-module>

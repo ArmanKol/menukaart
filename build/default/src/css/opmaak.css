@@ -1,0 +1,82 @@
+.navigatie ul{
+  list-style-type: none;
+  margin: 20;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+.navigatie li{
+  float: left;
+  background-color: white;
+  boder-right: 2px solid #bbb;
+  border: 1px solid black;
+}
+
+.navigatie li a{
+  display: block;
+  color: black  ;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigatie li a:hover:not(.active){
+  background-color: #D8D8D8;
+}
+
+.navigatie li a.active{
+  color: white;
+  background-color: #D8D8D8;
+}
+
+.titel{
+  width: 300px;
+  font-weight: bold;
+
+
+}
+a {
+  position: static;
+  vertical-align: top;
+}
+
+table, th, td{
+  border: 1px solid black;
+  text-align: center;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+.eigenschappenWijzigen{
+  background-color: white;
+  background-position: center;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.gerechttoevoegen{
+  background-color: white;
+  background-position: center;
+  text-align: center;
+  vertical-align: top;
+  padding-bottom: 10px;
+}
+
+.gerechtverwijderen{
+  background-color: white;
+  background-position: center;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+paper-input, paper-textarea{
+  max-width: 400px;
+  margin: auto;
+}
+
+header {
+  font-family: "Arial", Arial, Sans-serif;
+}
